@@ -1,4 +1,18 @@
-const operate = (x, op, y) => {
+const add = document.querySelector("#btnAdd");
+const subtract = document.querySelector("#btnSubtract");
+const multiply = document.querySelector("#btnMultiply");
+const divide = document.querySelector("#btnDivide");
+let displayValue = document.querySelector("#display").innerText;
+
+//CREATE EVENT LISTENERS FOR ALL THE BUTTONS
+//THEY SHOULD ADD THEIR TEXT CONTENT TO DISPLAYVALUE
+// -----PUT THAT RIGHT HERE-----//
+
+//MAKE THIS WORK LIKE A CHEAP POCKET CALCULATOR
+//ONCE A SECOND OPERATOR IS PUT IN, THE OPERATE FUNCTION SHOULD
+//EXECUTE AND STORE THE ANSWER
+//THINK ARRAY.SORT
+function operate(x, op, y) {
   const funcAdd = (x, y) => {
     return (x += y);
   };
@@ -25,4 +39,4 @@ const operate = (x, op, y) => {
   } else {
     return "there is no operator";
   }
-};
+}
