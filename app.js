@@ -2,11 +2,15 @@ const add = document.querySelector("#btnAdd");
 const subtract = document.querySelector("#btnSubtract");
 const multiply = document.querySelector("#btnMultiply");
 const divide = document.querySelector("#btnDivide");
-let displayValue = document.querySelector("#display").innerText;
+let displayValue = document.querySelector("#display").textContent;
 
 //CREATE EVENT LISTENERS FOR ALL THE BUTTONS
 //THEY SHOULD ADD THEIR TEXT CONTENT TO DISPLAYVALUE
-// -----PUT THAT RIGHT HERE-----//
+
+function test() {
+  document.querySelector("#display").textContent += this.textContent;
+}
+document.querySelector(".num").addEventListener("click", test);
 
 //MAKE THIS WORK LIKE A CHEAP POCKET CALCULATOR
 //ONCE A SECOND OPERATOR IS PUT IN, THE OPERATE FUNCTION SHOULD
