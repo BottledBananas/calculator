@@ -11,9 +11,11 @@ const numBtn = document.querySelectorAll(".num");
 function test() {
   document.querySelector("#display").textContent += this.textContent;
 }
-for (let i = 0; 1 < numBtn.length; i++) {
+for (let i = 0; i < numBtn.length; i++) {
   numBtn[i].addEventListener("click", test);
 }
+
+numBtn.addEventListener("click", test);
 
 //MAKE THIS WORK LIKE A CHEAP POCKET CALCULATOR
 //ONCE A SECOND OPERATOR IS PUT IN, THE OPERATE FUNCTION SHOULD
