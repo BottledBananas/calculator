@@ -3,6 +3,7 @@ const subtract = document.querySelector("#btnSubtract");
 const multiply = document.querySelector("#btnMultiply");
 const divide = document.querySelector("#btnDivide");
 let displayValue = document.querySelector("#display").textContent;
+const numBtn = document.querySelectorAll(".num");
 
 //CREATE EVENT LISTENERS FOR ALL THE BUTTONS
 //THEY SHOULD ADD THEIR TEXT CONTENT TO DISPLAYVALUE
@@ -10,7 +11,9 @@ let displayValue = document.querySelector("#display").textContent;
 function test() {
   document.querySelector("#display").textContent += this.textContent;
 }
-document.querySelector(".num").addEventListener("click", test);
+for (let i = 0; 1 < numBtn.length; i++) {
+  numBtn[i].addEventListener("click", test);
+}
 
 //MAKE THIS WORK LIKE A CHEAP POCKET CALCULATOR
 //ONCE A SECOND OPERATOR IS PUT IN, THE OPERATE FUNCTION SHOULD
