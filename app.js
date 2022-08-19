@@ -17,11 +17,9 @@ let answer = "";
 //This function makes all button numbers usable
 function addNumDisplay() {
   if (displayValue.textContent === answer.toString()) {
-    displayValue.textContent === "";
-    displayValue.textContent += this.textContent;
-  } else {
-    displayValue.textContent += this.textContent;
+    displayValue.textContent = "";
   }
+  displayValue.textContent += this.textContent;
 }
 for (let i = 0; i < numBtn.length; i++) {
   numBtn[i].addEventListener("click", addNumDisplay);
@@ -34,6 +32,7 @@ addBtn.addEventListener("click", test);
 function test() {
   if (x === 0) {
     x = displayValue.textContent;
+    answer = displayValue.textContent;
     console.log("x = 0");
   } else if (y === 0) {
     y = displayValue.textContent;
