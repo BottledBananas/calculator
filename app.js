@@ -12,7 +12,6 @@ let y = 0;
 let op = " ";
 let answer = " ";
 
-//This function makes all button numbers usable
 function addNumDisplay() {
   if (displayValue.textContent === answer.toString()) {
     displayValue.textContent = "";
@@ -24,14 +23,12 @@ function addNumDisplay() {
 for (let i = 0; i < numBtn.length; i++) {
   numBtn[i].addEventListener("click", addNumDisplay);
 }
-//end number buttons
 
-//Adder function, almost working!
 addBtn.addEventListener("click", opAdd);
 subtractBtn.addEventListener("click", opSubtract);
 multiplyBtn.addEventListener("click", opMultiply);
 divideBtn.addEventListener("click", opDivide);
-equalsBtn.addEventListener("click", registry);
+equalsBtn.addEventListener("click", opEquals);
 
 function opAdd() {
   console.log(op);
@@ -63,7 +60,7 @@ function opEquals() {
   op = "";
 }
 const funcAdd = (x, y) => {
-  answer = parseInt(x) + parseInt(y);
+  answer = x + y;
   console.log("added");
 };
 
@@ -104,6 +101,7 @@ function registry() {
     operate(x, y);
     displayValue.textContent = answer;
     x = answer;
+    y = 0;
   }
   if (displayValue.textContent.includes(NaN)) {
     x = 0;
