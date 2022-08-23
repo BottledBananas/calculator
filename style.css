@@ -1,12 +1,46 @@
 body {
-  background-color: blue;
+  background-color: rgb(181, 181, 181);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  font-size: large;
+  margin: 2px 2px;
 }
 
 #calcContainer {
   display: flex;
+  flex-direction: column;
+  width: 224px;
+  justify-content: center;
+  gap: 0px;
+  border: 4px solid black;
 }
 
 #display {
-  min-width: 200px;
+  margin: 2px;
+  width: 220px;
+  height: 50px;
+  font-size: large;
   background-color: white;
+}
+
+#divButtons {
+  display: flex;
+  gap: 0px;
+}
+
+#divNumbers {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
 }
