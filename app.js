@@ -58,6 +58,7 @@ function opEquals() {
   console.log(op);
   registry();
   op = "";
+  x = 0;
 }
 const funcAdd = (x, y) => {
   answer = parseInt(x) + parseInt(y);
