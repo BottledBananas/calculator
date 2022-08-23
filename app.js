@@ -60,7 +60,7 @@ function opEquals() {
   op = "";
 }
 const funcAdd = (x, y) => {
-  answer = x + y;
+  answer = parseInt(x) + parseInt(y);
   console.log("added");
 };
 
@@ -106,7 +106,7 @@ function registry() {
   if (displayValue.textContent.includes(NaN)) {
     x = 0;
     y = 0;
-    displayValue.textContent = " ";
+    displayValue.textContent = "Bro, you can't do that.";
   }
   console.log(`x = ${x}, y = ${y}`);
 }
